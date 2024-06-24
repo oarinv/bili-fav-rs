@@ -1,0 +1,16 @@
+[package]
+name = "bili-fav-rs"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.12.5"
+tokio = { version = "1.38.0", features = ["full"] }
+wd_log = "0.3.0"
+fs-set-times = "0.20.1"
+toml = "0.8.14"
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.117"
+serde_derive = "1.0.203"
