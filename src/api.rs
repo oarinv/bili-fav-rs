@@ -1,6 +1,5 @@
 use crate::read_cfg::read_config;
-use reqwest::header::COOKIE;
-use reqwest::header::USER_AGENT;
+use reqwest::header::{COOKIE,USER_AGENT,REFERER};
 use reqwest::{header, Response};
 
 // get api
@@ -16,7 +15,7 @@ pub async fn get_api(api: String) -> Result<Response, reqwest::Error> {
         .get(url)
         .header(USER_AGENT, user_agent)
         .header(COOKIE, cookie)
-        .header(header::REFERER, "https://www.bilibili.com")
+        .header(REFERER, "https://www.bilibili.com")
         .send()
         .await?;
 

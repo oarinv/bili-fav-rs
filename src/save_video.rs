@@ -1,8 +1,7 @@
 use crate::read_cfg::read_config;
 use fs_set_times::{set_mtime, SystemTimeSpec};
 use reqwest::header;
-use reqwest::header::COOKIE;
-use reqwest::header::USER_AGENT;
+use reqwest::header::{COOKIE,USER_AGENT,REFERER};
 use std::fs;
 use std::process::Command;
 use std::time::{Duration, SystemTime};
@@ -42,7 +41,7 @@ async fn download(url: String, title: String) -> Result<(), Box<dyn std::error::
         .get(url)
         .header(USER_AGENT, user_agent)
         .header(COOKIE, cookie)
-        .header(header::REFERER, "https://www.bilibili.com")
+        .header(REFERER, "https://www.bilibili.com")
         .send()
         .await?;
 
