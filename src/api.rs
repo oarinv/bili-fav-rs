@@ -1,6 +1,6 @@
 use crate::read_cfg::read_config;
-use reqwest::header::{COOKIE,USER_AGENT,REFERER};
-use reqwest::{header, Response};
+use reqwest::header::{COOKIE, REFERER, USER_AGENT};
+use reqwest::Response;
 
 // get api
 pub async fn get_api(api: String) -> Result<Response, reqwest::Error> {

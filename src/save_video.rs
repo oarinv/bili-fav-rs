@@ -1,7 +1,6 @@
 use crate::read_cfg::read_config;
 use fs_set_times::{set_mtime, SystemTimeSpec};
-use reqwest::header;
-use reqwest::header::{COOKIE,USER_AGENT,REFERER};
+use reqwest::header::{COOKIE, REFERER, USER_AGENT};
 use std::fs;
 use std::process::Command;
 use std::time::{Duration, SystemTime};
