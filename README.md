@@ -21,7 +21,7 @@
 [config]
 sessdata = 'YOUR_BILIBILI_COOKIE'
 fav_mid  = 'TARGET_FAVORITES_MID'
-fav_mode = 'fisrt&all'
+fav_mode = 'first&all'
 dir_path = '/path/to/save/videos'
 ```
 
